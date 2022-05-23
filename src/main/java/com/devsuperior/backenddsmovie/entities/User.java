@@ -2,17 +2,15 @@ package com.devsuperior.backenddsmovie.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
-import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-@Table(name = "tb_user")
 public class User {
 
     @Id
-    @GeneratedValue(strategy = IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String email;
 

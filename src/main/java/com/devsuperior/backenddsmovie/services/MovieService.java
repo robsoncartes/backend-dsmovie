@@ -27,7 +27,10 @@ public class MovieService {
     @Transactional(readOnly = true)
     public MovieDTO findById(Long id) {
 
-        Movie movie = movieRepository.findById(id).get();
+        Movie movie = movieRepository.findById(id).orElse(null);
+
+        if (movie == null)
+            throw new RuntimeException("Falhou");
 
         return new MovieDTO(movie);
     }
