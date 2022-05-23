@@ -2,8 +2,10 @@ package com.devsuperior.backenddsmovie.entities;
 
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "tb_score")
 public class Score {
 
     @EmbeddedId
