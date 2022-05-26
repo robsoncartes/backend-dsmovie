@@ -1,0 +1,217 @@
+{
+  "info": {
+    "_postman_id": "f0f67e23-f9c4-4d37-a3af-30e705e3042d",
+    "name": "SDS 8 - Movie",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "1908716"
+  },
+  "item": [
+    {
+      "name": "Local",
+      "item": [
+        {
+          "name": "getMovies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/movies",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "movies"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "saveScore",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"movieId\": 3,\r\n    \"email\": \"robson@gmail.com\",\r\n    \"score\": 6\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/scores",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "scores"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getMoviesPageable",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/movies?size=12&page=0",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "movies"
+              ],
+              "query": [
+                {
+                  "key": "size",
+                  "value": "12"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getMovieById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/movies/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "movies",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Heroku",
+      "item": [
+        {
+          "name": "getMovies",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://sds8-dsmovie.herokuapp.com/api/v1/movies",
+              "protocol": "https",
+              "host": [
+                "sds8-dsmovie",
+                "herokuapp",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movies"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getMovieById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://sds8-dsmovie.herokuapp.com/api/v1/movies/27",
+              "protocol": "https",
+              "host": [
+                "sds8-dsmovie",
+                "herokuapp",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movies",
+                "27"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getMoviesPageable",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://sds8-dsmovie.herokuapp.com/api/v1/movies/?size=12&page=0",
+              "protocol": "https",
+              "host": [
+                "sds8-dsmovie",
+                "herokuapp",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "movies",
+                ""
+              ],
+              "query": [
+                {
+                  "key": "size",
+                  "value": "12"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "saveScore",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"movieId\": 2,\r\n    \"email\": \"robsoncartes@outlook.com\",\r\n    \"score\": 4\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://sds8-dsmovie.herokuapp.com/api/v1/scores",
+              "protocol": "https",
+              "host": [
+                "sds8-dsmovie",
+                "herokuapp",
+                "com"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "scores"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
